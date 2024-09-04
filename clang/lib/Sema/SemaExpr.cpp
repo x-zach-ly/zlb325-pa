@@ -16599,6 +16599,11 @@ ExprResult Sema::ActOnEmbedExpr(SourceLocation EmbedKeywordLoc,
                 Data->getDataElementCount());
 }
 
+ExprResult Sema::ActOnIntExprCheck(SourceLocation Loc, Expr *Start, Expr *Expr, Expr *End) {
+    // Validate and create the IntExprCheckExpr AST node
+    return ExprResult(new (Context) IntExprCheckExpr(Start, Expr, End));
+}
+
 static bool maybeDiagnoseAssignmentToFunction(Sema &S, QualType DstType,
                                               const Expr *SrcExpr) {
   if (!DstType->isFunctionPointerType() ||

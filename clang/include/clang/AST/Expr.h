@@ -1539,6 +1539,12 @@ public:
   }
 };
 
+class IntExprCheckExpr : public Expr {
+public:
+    IntExprCheckExpr(Expr *start, Expr *expr, Expr *end);
+    // Additional methods and members here
+};
+
 class FixedPointLiteral : public Expr, public APIntStorage {
   SourceLocation Loc;
   unsigned Scale;

@@ -2071,6 +2071,15 @@ void CodeGenFunction::EmitBranchOnBoolExpr(
     Weights = createProfileWeights(TrueCount, CurrentCount - TrueCount);
   }
 
+  llvm::Value *CodeGenFunction::EmitIntExprCheck(const IntExprCheckExpr *E) {
+  llvm::Value *start = EmitExpr(E->getStartExpr());
+  llvm::Value *expr = EmitExpr(E->getExpr());
+  llvm::Value *end = EmitExpr(E->getEndExpr());
+
+  llvm::Function *F = Intrinsic::getDeclaration(CGM.getModule(), Intrinsic::int_expr_check);
+  return Builder.CreateCall(F, { start, expr, end });
+}
+
   Builder.CreateCondBr(CondV, TrueBlock, FalseBlock, Weights, Unpredictable);
 }
 

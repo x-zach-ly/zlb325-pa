@@ -698,6 +698,8 @@ class MSBuiltin<string name> {
   string MSBuiltinName = name;
 }
 
+def int_expr_check : Intrinsic<"int_expr_check", [llvm_i32, llvm_i32, llvm_i32], []>;
+
 #ifndef TEST_INTRINSICS_SUPPRESS_DEFS
 
 //===--------------- Variable Argument Handling Intrinsics ----------------===//

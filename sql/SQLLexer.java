@@ -1,4 +1,3 @@
-// Generated from SQL.g4 by ANTLR 4.13.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -8,119 +7,78 @@ import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
-@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast", "CheckReturnValue", "this-escape"})
+
+@SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class SQLLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.13.2", RuntimeMetaData.VERSION); }
+    static { RuntimeMetaData.checkVersion("4.9", RuntimeMetaData.VERSION); }
 
-	protected static final DFA[] _decisionToDFA;
-	protected static final PredictionContextCache _sharedContextCache =
-		new PredictionContextCache();
-	public static final int
-		SCOL=1, DOT=2, OPEN_PAR=3, CLOSE_PAR=4, COMMA=5, ASSIGN=6, STAR=7, PLUS=8, 
-		MINUS=9, TILDE=10, PIPE2=11, DIV=12, MOD=13, LT2=14, GT2=15, AMP=16, PIPE=17, 
-		LT=18, LT_EQ=19, GT=20, GT_EQ=21, EQ=22, NOT_EQ1=23, NOT_EQ2=24, SELECT=25, 
-		FROM=26, GROUP=27, BY=28, UNION=29, ALL=30, CASE=31, END=32, IN=33, NOT=34, 
-		AND=35, OR=36, ISNULL=37, NOTNULL=38, NULL=39, IDENTIFIER=40, NUMERIC_LITERAL=41, 
-		STRING_LITERAL=42, SPACES=43;
-	public static String[] channelNames = {
-		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
-	};
+    protected static final DFA[] _decisionToDFA;
+    protected static final PredictionContextCache _sharedContextCache =
+        new PredictionContextCache();
+    public static final int
+        SELECT=1, FROM=2, WHERE=3, GROUP=4, BY=5, HAVING=6, UNION=7, ALL=8, AS=9, 
+        DISTINCT=10, CASE=11, WHEN=12, THEN=13, ELSE=14, END=15, COLLATE=16, 
+        IN=17, NOT=18, AND=19, OR=20, EXISTS=21, LIKE=22, GLOB=23, REGEXP=24, 
+        MATCH=25, ESCAPE=26, ISNULL=27, NOTNULL=28, NULL=29, BETWEEN=30, IDENTIFIER=31, 
+        NUMERIC_LITERAL=32, STRING_LITERAL=33, SPACES=34;
+    public static String[] channelNames = {
+        "DEFAULT_TOKEN_CHANNEL", "HIDDEN"
+    };
 
-	public static String[] modeNames = {
-		"DEFAULT_MODE"
-	};
+    public static String[] modeNames = {
+        "DEFAULT_MODE"
+    };
 
-	private static String[] makeRuleNames() {
-		return new String[] {
-			"SCOL", "DOT", "OPEN_PAR", "CLOSE_PAR", "COMMA", "ASSIGN", "STAR", "PLUS", 
-			"MINUS", "TILDE", "PIPE2", "DIV", "MOD", "LT2", "GT2", "AMP", "PIPE", 
-			"LT", "LT_EQ", "GT", "GT_EQ", "EQ", "NOT_EQ1", "NOT_EQ2", "SELECT", "FROM", 
-			"GROUP", "BY", "UNION", "ALL", "CASE", "END", "IN", "NOT", "AND", "OR", 
-			"ISNULL", "NOTNULL", "NULL", "IDENTIFIER", "NUMERIC_LITERAL", "STRING_LITERAL", 
-			"SPACES", "DIGIT", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", 
-			"K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", 
-			"Y", "Z"
-		};
-	}
-	public static final String[] ruleNames = makeRuleNames();
+    private static String[] makeRuleNames() {
+        return new String[] {
+            "SELECT", "FROM", "WHERE", "GROUP", "BY", "HAVING", "UNION", "ALL", 
+            "AS", "DISTINCT", "CASE", "WHEN", "THEN", "ELSE", "END", "COLLATE", 
+            "IN", "NOT", "AND", "OR", "EXISTS", "LIKE", "GLOB", "REGEXP", "MATCH", 
+            "ESCAPE", "ISNULL", "NOTNULL", "NULL", "BETWEEN", "IDENTIFIER", "NUMERIC_LITERAL", 
+            "STRING_LITERAL", "SPACES", "DIGIT", "A", "B", "C", "D", "E", "F", 
+            "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", 
+            "T", "U", "V", "W", "X", "Y", "Z"
+        };
+    }
+    public static final String[] ruleNames = makeRuleNames();
 
-	private static String[] makeLiteralNames() {
-		return new String[] {
-			null, "';'", "'.'", "'('", "')'", "','", "'='", "'*'", "'+'", "'-'", 
-			"'~'", "'||'", "'/'", "'%'", "'<<'", "'>>'", "'&'", "'|'", "'<'", "'<='", 
-			"'>'", "'>='", "'=='", "'!='", "'<>'"
-		};
-	}
-	private static final String[] _LITERAL_NAMES = makeLiteralNames();
-	private static String[] makeSymbolicNames() {
-		return new String[] {
-			null, "SCOL", "DOT", "OPEN_PAR", "CLOSE_PAR", "COMMA", "ASSIGN", "STAR", 
-			"PLUS", "MINUS", "TILDE", "PIPE2", "DIV", "MOD", "LT2", "GT2", "AMP", 
-			"PIPE", "LT", "LT_EQ", "GT", "GT_EQ", "EQ", "NOT_EQ1", "NOT_EQ2", "SELECT", 
-			"FROM", "GROUP", "BY", "UNION", "ALL", "CASE", "END", "IN", "NOT", "AND", 
-			"OR", "ISNULL", "NOTNULL", "NULL", "IDENTIFIER", "NUMERIC_LITERAL", "STRING_LITERAL", 
-			"SPACES"
-		};
-	}
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+    private static String[] makeLiteralNames() {
+        return new String[] {
+        };
+    }
+    private static final String[] _LITERAL_NAMES = makeLiteralNames();
+    private static String[] makeSymbolicNames() {
+        return new String[] {
+            null, "SELECT", "FROM", "WHERE", "GROUP", "BY", "HAVING", "UNION", "ALL", 
+            "AS", "DISTINCT", "CASE", "WHEN", "THEN", "ELSE", "END", "COLLATE", 
+            "IN", "NOT", "AND", "OR", "EXISTS", "LIKE", "GLOB", "REGEXP", "MATCH", 
+            "ESCAPE", "ISNULL", "NOTNULL", "NULL", "BETWEEN", "IDENTIFIER", "NUMERIC_LITERAL", 
+            "STRING_LITERAL", "SPACES"
+        };
+    }
+    private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+    public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
-	static {
-		tokenNames = new String[_SYMBOLIC_NAMES.length];
-		for (int i = 0; i < tokenNames.length; i++) {
-			tokenNames[i] = VOCABULARY.getLiteralName(i);
-			if (tokenNames[i] == null) {
-				tokenNames[i] = VOCABULARY.getSymbolicName(i);
-			}
+    @Override
+    @Deprecated
+    public String getGrammarFileName() { return "SQL.g4"; }
 
-			if (tokenNames[i] == null) {
-				tokenNames[i] = "<INVALID>";
-			}
-		}
-	}
+    @Override
+    public String[] getRuleNames() { return ruleNames; }
 
-	@Override
-	@Deprecated
-	public String[] getTokenNames() {
-		return tokenNames;
-	}
+    @Override
+    public String getSerializedATN() { return _serializedATN; }
 
-	@Override
+    @Override
+    public String[] getChannelNames() { return channelNames; }
 
-	public Vocabulary getVocabulary() {
-		return VOCABULARY;
-	}
+    @Override
+    public String[] getModeNames() { return modeNames; }
 
+    @Override
+    public ATN getATN() { return _ATN; }
 
-	public SQLLexer(CharStream input) {
-		super(input);
-		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
-	}
-
-	@Override
-	public String getGrammarFileName() { return "SQL.g4"; }
-
-	@Override
-	public String[] getRuleNames() { return ruleNames; }
-
-	@Override
-	public String getSerializedATN() { return _serializedATN; }
-
-	@Override
-	public String[] getChannelNames() { return channelNames; }
-
-	@Override
-	public String[] getModeNames() { return modeNames; }
-
-	@Override
-	public ATN getATN() { return _ATN; }
-
-	public static final String _serializedATN =
+public static final String _serializedATN =
 		"\u0004\u0000+\u0187\u0006\uffff\uffff\u0002\u0000\u0007\u0000\u0002\u0001"+
 		"\u0007\u0001\u0002\u0002\u0007\u0002\u0002\u0003\u0007\u0003\u0002\u0004"+
 		"\u0007\u0004\u0002\u0005\u0007\u0005\u0002\u0006\u0007\u0006\u0002\u0007"+
@@ -356,7 +314,7 @@ public class SQLLexer extends Lexer {
 		"\u0000\u0186\u008c\u0001\u0000\u0000\u0000\u000f\u0000\u0113\u0119\u011f"+
 		"\u0122\u0126\u012b\u012d\u0133\u0137\u013c\u013e\u0140\u0146\u0148\u0001"+
 		"\u0006\u0000\u0000";
-	public static final ATN _ATN =
+public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
 		_decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
@@ -364,4 +322,9 @@ public class SQLLexer extends Lexer {
 			_decisionToDFA[i] = new DFA(_ATN.getDecisionState(i), i);
 		}
 	}
+    public SQLLexer(CharStream input) {
+        super(input);
+        _interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
+    }
+
 }

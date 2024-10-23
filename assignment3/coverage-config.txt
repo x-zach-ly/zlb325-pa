@@ -1,0 +1,5 @@
+# JPF configuration file to enable the coverage listener
+listener=CoverageListener
+
+# Optional: Add other JPF configurations as needed
+report.console.property=error
